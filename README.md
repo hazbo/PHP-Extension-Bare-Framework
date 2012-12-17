@@ -5,7 +5,15 @@ This is a small skeleton framework for building php extensions that will be impr
 
 ##Usage
 
-NOTE: I recommend you clone the source for PHP first, enter the `ext`
+###NOTE: I recommend you clone the source for PHP first, enter the `ext`
 directory, then create a folder in there for extension code to go.
 
+	cd /path/to/extension
+	phpize
+	./configure --enable-framework
+	make
+	sudo make install
+After this is done, head to your php.ini and add:
 
+	extension=framework.so
+Restart your web server if necessary, then you're good to go!
